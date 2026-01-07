@@ -35,7 +35,7 @@ nextBtn.addEventListener('click', () => {
     showSlide(currentIndex);
   } else {
     // pindah ke halaman login
-    window.location.href = "/code/login/login.html";
+    window.location.href = "/login/login.html";
   }
 });
 
