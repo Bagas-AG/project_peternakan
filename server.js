@@ -60,6 +60,10 @@ app.post("/verify-otp", (req, res) => {
   res.json({ success: false, message: "OTP salah / kadaluarsa" });
 });
 
+app.get("/wilayah.json", (req, res) => {
+  res.sendFile(path.join(__dirname, "wilayah.json"));
+});
+
 // ============================
 // 💬 KOMUNITAS POSTS
 // ============================

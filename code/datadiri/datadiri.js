@@ -5,7 +5,7 @@ const provinsiSelect = document.getElementById('provinsi');
 const kotaSelect = document.getElementById('wilayah');
 
 // === LOAD DATA DARI JSON ===
-fetch('../../wilayah.json')
+fetch('/wilayah.json')
   .then(response => response.json())
   .then(data => {
     // isi dropdown provinsi
