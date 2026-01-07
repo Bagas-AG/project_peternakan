@@ -1,0 +1,117 @@
+/* ====== STYLE DASAR ====== */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #e8f5e9, #f8f9fa);
+  color: #2c3e50;
+}
+
+/* ====== CONTAINER ====== */
+.container {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 22px;
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== JUDUL ====== */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #16a085;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ====== SELECT (PROVINSI & WILAYAH) ====== */
+select {
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #ffffff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 6px rgba(39, 174, 96, 0.3);
+  outline: none;
+}
+
+/* ====== CARD HARGA ====== */
+#hargaLive,
+#hargaMati,
+#hargaPotongan {
+  font-size: 15px;
+  line-height: 1.6;
+  background: #f8fdf8;
+  padding: 10px 14px;
+  border-left: 5px solid #27ae60;
+  border-radius: 6px;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+/* ====== WARNA KHUSUS PER JENIS ====== */
+#hargaLive {
+  border-left-color: #27ae60;
+}
+
+#hargaMati {
+  border-left-color: #16a085;
+}
+
+#hargaPotongan {
+  border-left-color: #e67e22;
+}
+
+/* ====== TOMBOL KEMBALI ====== */
+.back-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+button {
+  background: #555;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.25s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 600px) {
+  .container {
+    margin: 15px;
+    padding: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  select,
+  button {
+    font-size: 14px;
+  }
+}

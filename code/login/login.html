@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Masuk — Farm (Contoh)</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="screen">
+    <div class="hero" aria-hidden="true"></div>
+
+    <section class="panel">
+      <button class="back" id="backBtn" aria-label="Kembali">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <h1>Masuk</h1>
+      <p class="lead">Masukkan nomor handphone Anda untuk masuk ke Farm.</p>
+
+      <div class="input-wrap">
+        <input id="phone" class="phone-input" type="tel" inputmode="numeric" placeholder="No Handphone" maxlength="15">
+      </div>
+
+      <button id="loginBtn" class="btn-primary">Masuk</button>
+
+      <p class="privacy">
+        Dengan menekan tombol masuk berarti Anda menyetujui dan menerima Ketentuan Layanan dan Kebijakan Privasi dari Agrinis yang tertuang dalam
+        <a href="#">Privacy Policy</a>
+      </p>
+    </section>
+
+    <div class="spacer"></div>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+:root{
+  --green:#0f6b55;
+  --muted:#6f7b76;
+  --bg:#f6f6f6;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial;background:var(--bg);color:#222}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:16px;background:var(--green);color:#fff;position:sticky;top:0;z-index:20}
+.topbar .title{font-weight:700;font-size:20px}
+.icon-btn{background:transparent;border:0;color:inherit;font-size:20px;cursor:pointer}
+
+/* layout */
+.wrap{padding:16px;padding-bottom:100px;max-width:900px;margin:0 auto}
+
+/* user row */
+.user-row{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+.user-row input{padding:8px;border-radius:10px;border:1px solid #ddd;flex:1}
+
+/* composer */
+.composer{background:#fff;border-radius:12px;padding:12px;margin-bottom:12px;box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+.composer textarea{width:100%;border:1px solid #eee;border-radius:10px;padding:10px;font-size:14px;resize:none}
+.composer-actions{display:flex;align-items:center;gap:8px;margin-top:8px}
+.btn{padding:8px 12px;border-radius:10px;border:0;background:#eee;cursor:pointer}
+.btn.primary{background:var(--green);color:#fff;font-weight:700}
+
+/* preview */
+.preview{display:flex;align-items:center;gap:8px;margin-top:10px}
+.preview img{max-width:120px;border-radius:10px;border:1px solid #ddd}
+.small{padding:6px 8px;font-size:12px}
+
+/* tabs */
+.tabs{display:flex;gap:8px;margin:10px 0 14px}
+.tab{background:#fff;padding:8px 14px;border-radius:20px;border:1px solid #eee;cursor:pointer}
+.tab.active{background:var(--green);color:#fff;border-color:var(--green)}
+
+/* posts */
+.posts{display:flex;flex-direction:column;gap:12px}
+.post{background:#fff;border-radius:12px;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,0.03)}
+.post .head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.avatar{width:44px;height:44px;border-radius:50%;background:#ddd;display:inline-block}
+.username{font-weight:700}
+.meta{color:var(--muted);font-size:13px}
+
+/* post content */
+.post .text{margin:8px 0;color:#222;white-space:pre-wrap}
+.post img.attached{width:100%;max-height:360px;object-fit:cover;border-radius:8px;margin-top:8px}
+
+/* actions */
+.actions{display:flex;gap:12px;align-items:center;margin-top:10px;border-top:1px solid #f0f0f0;padding-top:10px}
+.action-btn{background:transparent;border:0;color:var(--muted);cursor:pointer;display:flex;align-items:center;gap:8px}
+.action-btn.liked{color:var(--green);font-weight:700}
+
+/* comment area (simple) */
+.comments{margin-top:8px;padding-left:6px}
+.comment{font-size:13px;color:#333;margin-top:6px}
+.comment .who{font-weight:700;margin-right:6px}
+
+/* bottom nav */
+.bottom-nav{
+  position:fixed;
+  left:0; right:0; bottom:0;
+  height:70px;
+  background:white;
+  border-top:1px solid #eee;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  padding:8px 6px;
+  z-index:60;
+}
+.nav-btn{
+  background:transparent;
+  border:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  color:#9aa9a6;
+  font-size:12px;
+  cursor:pointer;
+  text-decoration:none;   /* ⬅️ garis bawah hilang */
+}
+.nav-btn .nav-icon{
+  font-size:18px;
+}
+.nav-btn.active{
+  color:var(--green);
+  font-weight:700;
+}
+/* responsive */
+@media(min-width:900px){
+  .wrap{padding:24px}
+  .composer textarea{font-size:15px}
+}

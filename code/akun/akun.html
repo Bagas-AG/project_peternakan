@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Akun — Farm</title>
+  <link rel="stylesheet" href="akun.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="left">
+      <div class="title">Akun</div>
+    </div>
+    <div class="right">
+      <button id="inboxBtn" class="icon-btn">🔔<span id="inboxBadge" class="badge" hidden>0</span></button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- profile header -->
+    <section class="profile-card">
+      <div class="avatar" id="avatar">👤</div>
+      <div class="profile-info">
+        <div id="displayName" class="name">Nama Pengguna</div>
+        <div id="displayPhone" class="phone">08xx-xxxx-xxxx</div>
+      </div>
+    </section>
+
+    <!-- promo -->
+    <section class="promo">
+      <div class="promo-text">Nikmati seluruh fitur menarik kami dengan berlangganan VIP</div>
+      <button id="btnVip" class="btn small">Telusuri</button>
+    </section>
+
+    <!-- sections -->
+    <section class="section">
+      <div class="section-head">
+        <div class="section-title">Akun</div>
+      </div>
+
+      <ul class="list">
+        <li class="list-item" id="btnEditProfile">Ubah Profil <span class="chev">›</span></li>
+        <li class="list-item" id="btnChangePassword">Ubah Kata Sandi <span class="chev">›</span></li>
+        <li class="list-item" id="btnKodeKandang">Kode Kandang <span class="chev">›</span></li>
+        <li class="list-item" id="btnPoint">Point Reward <span class="chev">›</span></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="section-title">Pengaturan</div>
+      </div>
+
+      <ul class="list">
+        <li class="list-item" id="btnSapro">Pengajuan Jenis Sapronak Baru <span class="badge small-badge">VIP</span></li>
+        <li class="list-item" id="btnPersonel">Atur Personel <span class="chev">›</span></li>
+        <li class="list-item" id="btnStandarisasi">Standarisasi Data harian <span class="chev">›</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- bottom navigation -->
+  <nav class="bottom-nav">
+    <a href="../home/home.html" class="nav-btn">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label">Beranda</span>
+    </a>
+    <a href="../kandang/kandang.html" class="nav-btn">
+      <span class="nav-icon">🏚️</span>
+      <span class="nav-label">Kandang</span>
+    </a>
+    <a href="../komunitas/komunitas.html" class="nav-btn">
+      <span class="nav-icon">👥</span>
+      <span class="nav-label">Komunitas</span>
+    </a>
+    <a href="../medis/medis.html" class="nav-btn">
+      <span class="nav-icon">💊</span>
+      <span class="nav-label">Medis</span>
+    </a>
+    <a href="../akun/akun.html" class="nav-btn">
+      <span class="nav-icon">👤</span>
+      <span class="nav-label">Akun</span>
+    </a>
+  </nav>
+
+  <!-- modal edit profile -->
+  <div id="modalProfile" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeProfile" class="close">✕</button>
+      <h3>Ubah Profil</h3>
+      <form id="formProfile">
+        <label>Nama</label>
+        <input id="inputName" type="text" required>
+        <label>No. Handphone</label>
+        <input id="inputPhone" type="tel" required>
+        <div class="modal-actions">
+          <button type="button" class="btn" id="cancelProfile">Batal</button>
+          <button type="submit" class="btn primary">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- modal change password -->
+  <div id="modalPass" class="modal hidden">
+    <div class="modal-content">
+      <button id="closePass" class="close">✕</button>
+      <h3>Ubah Kata Sandi</h3>
+      <form id="formPass">
+        <label>Kata Sandi Lama</label>
+        <input id="oldPass" type="password" required>
+        <label>Kata Sandi Baru</label>
+        <input id="newPass" type="password" required>
+        <label>Konfirmasi</label>
+        <input id="confPass" type="password" required>
+        <div class="modal-actions">
+          <button type="button" class="btn" id="cancelPass">Batal</button>
+          <button type="submit" class="btn primary">Ganti</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- modal info -->
+  <div id="modalInfo" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeInfo" class="close">✕</button>
+      <h3 id="infoTitle">Info</h3>
+      <div id="infoBody"></div>
+      <div class="modal-actions" style="margin-top:12px;">
+        <button id="okInfo" class="btn primary">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="akun.js"></script>
+</body>
+</html>

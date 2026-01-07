@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verifikasi OTP</title>
+  <link rel="stylesheet" href="otp.css" />
+</head>
+<body>
+  <div class="screen">
+    <div class="panel">
+      <div class="back" onclick="history.back()">&#8592;</div>
+
+      <h1>Masukkan Kode OTP</h1>
+      <p class="lead">Kami telah mengirimkan kode verifikasi 6 digit ke nomormu.</p>
+
+      <div class="input-wrap">
+        <input 
+          type="text" 
+          id="otp" 
+          class="otp-input" 
+          placeholder="6 digit" 
+          maxlength="6"
+        />
+      </div>
+
+      <button id="verifyBtn" class="btn-primary">Next</button>
+
+      <p class="privacy">
+        Tidak menerima kode? <a href="#" id="resendOtp">Kirim ulang</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- file JS eksternal -->
+  <script src="otp.js"></script>
+</body>
+</html>

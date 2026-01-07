@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoring IoT Kandang</title>
+  <link rel="stylesheet" href="iot.css" />
+</head>
+<body>
+
+<div class="container">
+  <h2>📡 Monitoring IoT Kandang</h2>
+
+  <!-- CARD PH AIR -->
+  <div class="card">
+    <h3>💧 pH Air Minum</h3>
+    <p id="phValue" class="value">-</p>
+    <span id="phStatus" class="status">Status: -</span>
+  </div>
+
+  <!-- CARD JUMLAH AYAM -->
+  <div class="card">
+    <h3>🐔 Jumlah Ayam</h3>
+    <p id="ayamValue" class="value">-</p>
+    <span class="status">Ekor</span>
+  </div>
+
+  <!-- SIMULASI UPDATE -->
+  <div class="button-container">
+    <button class="btn-primary" onclick="updateData()">🔄 Update Data</button>
+  </div>
+
+  <div class="back-container">
+    <button onclick="window.location.href='../home/home.html'">
+      ⬅ Kembali ke Beranda
+    </button>
+  </div>
+</div>
+
+<script src="iot.js"></script>
+</body>
+</html>

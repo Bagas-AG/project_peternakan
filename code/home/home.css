@@ -1,0 +1,339 @@
+
+:root {
+  --green: #0f6b55;
+  --muted: #6f7b76;
+  --accent: #f6cf3b;
+  --bg: #f6f6f6;
+  --white: #fff;
+  --orange: #ff9900;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: #222;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+/* ===== Topbar (Horizontal Layout) ===== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--green);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+/* Kiri: User info */
+.top-left .user-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+.top-left .user-sub {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* Kanan: Weather + Notif dalam 1 baris */
+.top-right-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Weather section */
+.weather-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.weather-icon { font-size: 22px; }
+.weather-values {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+/* Weather kanan */
+.weather-right {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  gap: 4px;
+}
+
+/* Notifikasi */
+.top-right .icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+  color: white;
+}
+.badge {
+  position: absolute;
+  top: -4px; right: -6px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+/* ===== Help Banner ===== */
+.help-banner {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #fff;
+  padding: 14px;
+  border-radius: 12px;
+  margin: 16px;
+  font-size: 14px;
+}
+.help-icon { font-size: 18px; color: var(--accent); }
+.help-text a { color: var(--green); font-weight: 600; }
+
+/* ===== Features ===== */
+.features-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 10px;
+}
+.feature-item {
+  text-align: center;
+  flex: 1;
+}
+.fi-icon {
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  background: rgba(15,107,85,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 6px;
+  font-size: 20px;
+  color: var(--green);
+}
+.fi-label { font-size: 13px; line-height: 1.3; }
+
+/* ===== Produk Section ===== */
+.product-section {
+  margin: 0 16px;
+}
+
+.product-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Carousel Container */
+.card-carousel {
+  display: flex;
+  overflow: hidden; /* hanya 1 card terlihat */
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+
+/* Card Item */
+.card-carousel .card {
+  flex: 0 0 100%;          /* default mobile 1 card */
+  scroll-snap-align: start;
+  background: #fffbe9;
+  border-radius: 17px;
+  padding: 16px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card p { 
+  margin: 0 0 10px; 
+  font-size: 14px; 
+}
+
+.btn.small {
+  background: var(--orange);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.carousel-dots{
+  cursor: pointer;
+}
+/* ===== Section ===== */
+.section { margin: 24px 16px; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-head h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.section-head a { font-size: 14px; color: var(--green); text-decoration: none; }
+
+/* ===== News ===== */
+.news-list { list-style: none; padding: 0; margin: 0; }
+.news-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+.news-item h4 {
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+
+/* ===== Bottom Nav ===== */
+.bottom-nav {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  height: 64px;
+  background: white;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 60;
+}
+.nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: #9aa9a6;
+  font-size: 12px;
+  text-decoration: none;
+}
+.nav-btn.active {
+  color: var(--green);
+  font-weight: 600;
+}
+.nav-icon { font-size: 20px; }
+
+
+
+
+/* ===== Responsive Layout ===== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 90px;
+  }
+
+  .features-row {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .feature-item {
+    min-width: 120px;
+    margin: 6px;
+  }
+
+  .card-carousel {
+    height: 220px;
+  }
+  .card img {
+    width: 40%;
+  }
+  .card .card-body {
+    width: 60%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .content {
+    max-width: 960px;
+  }
+
+  .weather-card {
+    padding: 20px;
+    font-size: 1.1em;
+  }
+
+  .help-banner {
+    font-size: 1.1em;
+    padding: 18px;
+  }
+
+  .feature-item {
+    min-width: 140px;
+    padding: 20px;
+  }
+
+  .card-carousel {
+    height: 260px;
+  }
+
+  .card img {
+    width: 35%;
+  }
+  .card .card-body {
+    width: 65%;
+  }
+
+  .news-item {
+    padding: 20px;
+    font-size: 1.05em;
+  }
+}
+
+/* Super Wide Desktop */
+@media (min-width: 1440px) {
+  .content {
+    max-width: 1200px;
+  }
+
+  .features-row {
+    gap: 24px;
+  }
+
+  .feature-item {
+    min-width: 160px;
+    padding: 24px;
+    font-size: 1.05em;
+  }
+}

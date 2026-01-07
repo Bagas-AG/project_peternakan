@@ -1,0 +1,36 @@
+[
+  {
+    "populasi": 15,
+    "umur": 20,
+    "pakan": 20,
+    "ayamPanen": 20,
+    "tonase": 20,
+    "hargaDoc": 12000,
+    "hargaPakan": 15000,
+    "biayaOvk": 12400,
+    "hargaPasar": 30000,
+    "totalBiaya": 728000,
+    "totalPendapatan": 600000,
+    "laba": -128000,
+    "BEP": 36400,
+    "id": "sim_4zigr6o",
+    "createdAt": "2025-10-07T14:10:07.612Z"
+  },
+  {
+    "populasi": 15,
+    "umur": 20,
+    "pakan": 20,
+    "ayamPanen": 20,
+    "tonase": 20,
+    "hargaDoc": 12000,
+    "hargaPakan": 15000,
+    "biayaOvk": 12400,
+    "hargaPasar": 30000,
+    "totalBiaya": 728000,
+    "totalPendapatan": 600000,
+    "laba": -128000,
+    "BEP": 36400,
+    "id": "sim_0juxnl5",
+    "createdAt": "2025-10-07T14:10:07.618Z"
+  }
+]

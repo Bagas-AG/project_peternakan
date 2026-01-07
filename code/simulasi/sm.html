@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulasi Produksi</title>
+  <link rel="stylesheet" href="sm.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Simulasi Produksi Ayam Broiler</h2>
+
+    <!-- ========================== -->
+    <!-- CARD 1: INPUT DATA BUDIDAYA -->
+    <!-- ========================== -->
+    <section class="card">
+      <h3>📋 Input Data Budidaya</h3>
+
+      <label>Berapa ekor populasi ayam pada saat awal budidaya?</label>
+      <input type="number" id="populasi" placeholder="ekor" />
+
+      <label>Pada umur berapa Anda targetkan selesai panen?</label>
+      <input type="number" id="umur" placeholder="hari" />
+
+      <label>Berapa estimasi total pakan yang terpakai hingga selesai panen?</label>
+      <input type="number" id="pakan" placeholder="kg" />
+
+      <label>Berapa estimasi total ekor ayam yang akan terpanen?</label>
+      <input type="number" id="ayamPanen" placeholder="ekor" />
+
+      <label>Berapa estimasi total tonase daging yang akan terpanen?</label>
+      <input type="number" id="tonase" placeholder="kg" />
+    </section>
+
+    <!-- ========================== -->
+    <!-- CARD 2: INPUT HARGA PRODUKSI -->
+    <!-- ========================== -->
+    <section class="card">
+      <h3>💰 Input Data Harga</h3>
+
+      <label>Harga DOC per ekor (Rp):</label>
+      <input type="number" id="hargaDoc" placeholder="Rp/ekor" />
+
+      <label>Harga Pakan per kg (Rp):</label>
+      <input type="number" id="hargaPakan" placeholder="Rp/kg" />
+
+      <label>Biaya OVK per kg (Rp):</label>
+      <input type="number" id="biayaOvk" placeholder="Rp/kg" />
+
+      <label>Harga Ayam di Pasar per kg (Rp):</label>
+      <input type="number" id="hargaPasar" placeholder="Rp/kg" />
+    </section>
+
+    <!-- ========================== -->
+    <!-- BUTTON AKSI -->
+    <!-- ========================== -->
+    <div class="button-container">
+      <button class="btn-primary" onclick="hitung()">💾 Simpan Data</button>
+      <button class="btn-secondary" onclick="kalkulasi()">📈 Hitung Hasil</button>
+      <button class="btn-reset" onclick="resetForm()">🔄 Reset</button>
+    </div>
+
+    <!-- ========================== -->
+    <!-- TOMBOL KEMBALI KE HOME -->
+    <!-- ========================== -->
+    <div class="back-container">
+      <button class="btn-back" onclick="window.location.href='../home/home.html'">
+        ⬅ Kembali ke Beranda
+      </button>
+    </div>
+  </div>
+
+  <script src="sm.js"></script>
+</body>
+</html>

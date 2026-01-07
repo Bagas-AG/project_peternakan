@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Komunitas — Farm</title>
+  <link rel="stylesheet" href="komunitas.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="left">
+      <div class="title">Komunitas</div>
+    </div>
+    <div class="right">
+      <button id="btnProfile" class="icon-btn">👤</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- username / switch user -->
+    <div class="user-row">
+      <div>
+        <label for="username">Nama (pakai identitas):</label>
+        <input id="username" placeholder="Masukkan nama Anda" />
+      </div>
+      <button id="saveUser" class="btn">Simpan</button>
+    </div>
+
+    <!-- create post -->
+    <section class="composer">
+      <textarea id="postText" placeholder="Bagikan sesuatu di komunitas..." rows="3"></textarea>
+      <div class="composer-actions">
+        <input id="postImage" type="file" accept="image/*">
+        <button id="publishBtn" class="btn primary">Bagikan</button>
+      </div>
+      <div id="previewWrap" class="preview" hidden>
+        <img id="previewImg" alt="preview">
+        <button id="removePreview" class="small">Hapus</button>
+      </div>
+    </section>
+
+    <!-- filters -->
+    <div class="tabs">
+      <button class="tab active" data-filter="all">Terbaru</button>
+      <button class="tab" data-filter="trending">Trending</button>
+      <button class="tab" data-filter="stories">Cerita Peternak</button>
+    </div>
+
+    <!-- posts list -->
+    <section id="posts" class="posts"></section>
+  </main>
+
+  <!-- bottom navigation -->
+  <nav class="bottom-nav">
+    <a href="../home/home.html" class="nav-btn">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label">Beranda</span>
+    </a>
+    <a href="../kandang/kandang.html" class="nav-btn">
+      <span class="nav-icon">🏚️</span>
+      <span class="nav-label">Kandang</span>
+    </a>
+    <a href="../komunitas/komunitas.html" class="nav-btn">
+      <span class="nav-icon">👥</span>
+      <span class="nav-label">Komunitas</span>
+    </a>
+    <a href="../medis/medis.html" class="nav-btn">
+      <span class="nav-icon">💊</span>
+      <span class="nav-label">Medis</span>
+    </a>
+    <a href="../akun/akun.html" class="nav-btn">
+      <span class="nav-icon">👤</span>
+      <span class="nav-label">Akun</span>
+    </a>
+  </nav>
+
+  <script src="komunitas.js"></script>
+</body>
+</html>

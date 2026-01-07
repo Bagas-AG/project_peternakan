@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perhitungan Dosis Obat Unggas</title>
+  <link rel="stylesheet" href="dosis.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>💊 Perhitungan Dosis Obat Ayam</h2>
+
+    <!-- ========================== -->
+    <!-- CARD 1: DATA TERNAK -->
+    <!-- ========================== -->
+    <section class="card">
+      <h3>🐔 Data Ternak</h3>
+
+      <label>Jumlah Populasi Ayam</label>
+      <input type="number" id="populasi" placeholder="ekor">
+
+      <label>Bobot Rata-rata Ayam</label>
+      <input type="number" id="bobot" placeholder="kg/ekor">
+
+      <label>Konsumsi Air per Ekor per Hari</label>
+      <input type="number" id="air" placeholder="liter/ekor">
+    </section>
+
+    <!-- ========================== -->
+    <!-- CARD 2: DATA OBAT -->
+    <!-- ========================== -->
+    <section class="card">
+      <h3>🧪 Data Obat</h3>
+
+      <label>Dosis Anjuran Obat</label>
+      <input type="number" id="dosis" placeholder="mg/kg BB">
+
+      <label>Kadar Obat</label>
+      <input type="number" id="kadar" placeholder="mg per gram obat">
+    </section>
+
+    <!-- ========================== -->
+    <!-- BUTTON -->
+    <!-- ========================== -->
+    <div class="button-container">
+      <button class="btn-primary" onclick="hitungDosis()">📊 Hitung Dosis</button>
+      <button class="btn-reset" onclick="resetForm()">🔄 Reset</button>
+    </div>
+
+    <!-- ========================== -->
+    <!-- HASIL -->
+    <!-- ========================== -->
+    <section class="card hasil">
+      <h3>📈 Hasil Perhitungan</h3>
+      <p id="hasil">Masukkan data lalu klik "Hitung Dosis"</p>
+    </section>
+
+    <!-- ========================== -->
+    <!-- KEMBALI -->
+    <!-- ========================== -->
+    <div class="back-container">
+      <button class="btn-back" onclick="window.location.href='../home/home.html'">
+        ⬅ Kembali ke Beranda
+      </button>
+    </div>
+  </div>
+
+  <script src="dosis.js"></script>
+</body>
+</html>

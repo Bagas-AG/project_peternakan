@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Beranda — Farm</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+  <header class="topbar">
+      <div class="top-left">
+        <div class="user">
+          <div class="user-name" id="userName"></div>
+          <div class="user-sub">-</div>
+        </div>
+      </div>
+
+      <div class="top-right-wrapper">
+        <div class="weather-left">
+          <div class="weather-icon">☀️</div>
+          <div class="weather-values">
+            <div class="temp">-</div>
+            <div class="meta small">-</div>
+          </div>
+        </div>
+
+        <div class="weather-right">
+          <div class="meta">💧 - %</div>
+          <div class="meta">💨 - km/h</div>
+        </div>
+
+        <div class="top-right">
+          <button id="notifBtn" class="icon-btn bell" aria-label="notifikasi">
+            🔔<span id="notifBadge" class="badge" hidden>1</span>
+          </button>
+        </div>
+      </div>
+
+  </header>
+
+
+  <!-- help banner -->
+  <section class="help-banner">
+    <div class="help-icon">❗</div>
+    <div class="help-text">
+      <div class="title"><strong>Anda Pengguna Baru?</strong></div>
+      <div class="subtitle">Klik <a href="#" id="guideLink">di sini</a> untuk melihat panduan penggunaan</div>
+    </div>
+  </section>
+
+  <!-- features row -->
+  <section class="features-row">
+    <div class="feature-item" data-key="simulasi">
+      <a href="../simulasi/sm.html"><div class="fi-icon">🐔</div></a>
+      <div class="fi-label">Simulasi<br>Produksi</div>
+    </div>
+    <div class="feature-item" data-key="dosis">
+      <a href="../dosis/dosis.html"><div class="fi-icon">💉</div></a>
+      
+      <div class="fi-label">Dosis<br>Obat</div>
+    </div>
+    <div class="feature-item" data-key="harga">
+      <a href="../harga/harga.html"><div class="fi-icon">🏪</div></a>
+      
+      <div class="fi-label">Harga<br>Pasar</div>
+    </div>
+    <div class="feature-item" data-key="bantuan">
+      <a href="../cs/cs.html"><div class="fi-icon">🎧</div></a>
+      
+      <div class="fi-label">Bantuan<br>TS</div>
+    </div>
+    <div class="feature-item" data-key="sensor">
+      <a href="../iot/iot.html"><div class="fi-icon">📶</div></a>
+      
+      <div class="fi-label">Sensor<br>IoT</div>
+    </div>
+  </section>
+
+  <!-- carousel / produk -->
+  <section class="product-section">
+    <h3>Produk Terbaru</h3>
+    <div class="card-carousel" id="carousel">
+      <div class="card active">
+        <img src="" alt="Tips & Trik" onerror="this.style.display='none'">
+        <div class="card-body">
+          <h4>Tips & Trik</h4>
+          <p>Dapatkan tips & trik untuk budidaya ternak yang efisien.</p>
+          <button class="btn small" data-action="details">Selengkapnya</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="photo/banner2.jpg" alt="Produk 2" onerror="this.style.display='none'">
+        <div class="card-body">
+          <h4>Pakan Berkualitas</h4>
+          <p>Cari pakan terbaik untuk meningkatkan performa.</p>
+          <button class="btn small" data-action="details">Selengkapnya</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-dots" id="dots">
+      <button class="dot active" data-index="0"></button>
+      <button class="dot" data-index="1"></button>
+    </div>
+  </section>
+
+  <!-- layanan unggulan -->
+  <section class="section">
+    <h3>Layanan Unggulan</h3>
+    <div class="placeholder">Konten layanan unggulan (ikon / card) — contoh text</div>
+  </section>
+
+  <!-- berita -->
+  <section class="section">
+    <div class="section-head">
+      <h3>Berita Industri</h3>
+      <a href="#" id="lihatSemua">Lihat Semua</a>
+    </div>
+    <ul class="news-list" id="newsList">
+      <li class="news-item">
+        <h4>Pentingnya Kualitas Bahan Baku</h4>
+        <p class="small">Dalam menunjang kualitas pakan...</p>
+      </li>
+      <li class="news-item">
+        <h4>Inovasi Sensor IoT</h4>
+        <p class="small">Mempermudah monitoring kandang secara real-time.</p>
+      </li>
+    </ul>
+  </section>
+  </main>
+
+  <!-- bottom navigation -->
+  <nav class="bottom-nav">
+    <a href="../home/home.html" class="nav-btn">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label">Beranda</span>
+    </a>
+    <a href="../kandang/kandang.html" class="nav-btn">
+      <span class="nav-icon">🏚️</span>
+      <span class="nav-label">Kandang</span>
+    </a>
+    <a href="../komunitas/komunitas.html" class="nav-btn">
+      <span class="nav-icon">👥</span>
+      <span class="nav-label">Komunitas</span>
+    </a>
+    <a href="../medis/medis.html" class="nav-btn">
+      <span class="nav-icon">💊</span>
+      <span class="nav-label">Medis</span>
+    </a>
+    <a href="../akun/akun.html" class="nav-btn">
+      <span class="nav-icon">👤</span>
+      <span class="nav-label">Akun</span>
+    </a>
+  </nav>
+
+
+  <script src="home.js"></script>
+</body>
+
+</html>

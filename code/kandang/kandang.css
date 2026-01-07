@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.topbar {
+  background: #0c6d45;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.content {
+  padding: 24px;
+  text-align: center;
+}
+
+.empty-coop img {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+.empty-coop h2 {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.empty-coop p {
+  font-size: 14px;
+  color: #666;
+}
+
+.btn {
+  display: block;
+  margin: 16px auto;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  width: 80%;
+}
+
+.btn.primary {
+  background: #0c6d45;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #fff;
+  border: 1px solid #0c6d45;
+  color: #0c6d45;
+}
+
+/* bottom nav */
+.bottom-nav{
+  position:fixed;
+  left:0; right:0; bottom:0;
+  height:70px;
+  background:white;
+  border-top:1px solid #eee;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  padding:8px 6px;
+  z-index:60;
+}
+.nav-btn{
+  background:transparent;
+  border:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  color:#9aa9a6;
+  font-size:12px;
+  cursor:pointer;
+  text-decoration:none;   /* ⬅️ garis bawah hilang */
+}
+.nav-btn .nav-icon{
+  font-size:18px;
+}
+.nav-btn.active{
+  color:var(--green);
+  font-weight:700;
+}
+

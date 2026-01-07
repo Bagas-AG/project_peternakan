@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Penyakit — Medis</title>
+  <link rel="stylesheet" href="penyakit.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="left">
+      <a href="medis.html" class="icon-btn">←</a>
+      <div class="title">PENYAKIT</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="search-row">
+      <input id="searchInput" type="search" placeholder="Cari penyakit" />
+      <button class="search-btn" title="Cari">🔍</button>
+    </div>
+
+    <section class="grid-wrap" id="gridWrap">
+      <!-- grid items akan diinject oleh JS -->
+    </section>
+  </main>
+
+
+  <!-- modal detail -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close">✕</button>
+      <h3 id="modalTitle">Judul</h3>
+      <p id="modalDesc">Deskripsi</p>
+    </div>
+  </div>
+
+  <script src="penyakit.js"></script>
+</body>
+
+</html>

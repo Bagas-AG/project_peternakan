@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medis — Farm</title>
+  <link rel="stylesheet" href="medis.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="left">
+      <div class="title">Medis</div>
+    </div>
+    <div class="right">
+      <button id="helpBtn" class="icon-btn" title="Bantuan">❓</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="location-row">
+      <span class="loc-icon">📍</span>
+      <span id="locationText">Lokasi tidak tersedia</span>
+    </div>
+
+    <div class="search-wrap">
+      <input id="searchInput" placeholder="Cari penyakit atau obat" />
+      <button id="searchBtn" class="search-btn">🔍</button>
+    </div>
+
+    <h3 class="section-title">PENYAKIT</h3>
+    <div id="diseaseGrid" class="grid grid-4">
+      <!-- disease items injected by JS -->
+    </div>
+
+    <h3 class="section-title">PRODUSEN</h3>
+    <div id="producerGrid" class="grid grid-3 producers">
+      <!-- producers injected by JS -->
+    </div>
+  </main>
+
+  <!-- bottom navigation -->
+  <nav class="bottom-nav">
+    <a href="../home/home.html" class="nav-btn">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label">Beranda</span>
+    </a>
+    <a href="../kandang/kandang.html" class="nav-btn">
+      <span class="nav-icon">🏚️</span>
+      <span class="nav-label">Kandang</span>
+    </a>
+    <a href="../komunitas/komunitas.html" class="nav-btn">
+      <span class="nav-icon">👥</span>
+      <span class="nav-label">Komunitas</span>
+    </a>
+    <a href="../medis/medis.html" class="nav-btn">
+      <span class="nav-icon">💊</span>
+      <span class="nav-label">Medis</span>
+    </a>
+    <a href="../akun/akun.html" class="nav-btn">
+      <span class="nav-icon">👤</span>
+      <span class="nav-label">Akun</span>
+    </a>
+  </nav>
+
+  <!-- modal sederhana untuk detail -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-content">
+      <button id="closeModal" class="close">✕</button>
+      <h3 id="modalTitle">cihuy sakit</h3>
+      <p id="modalBody">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos deserunt minus ea. Voluptatibus quae maiores aspernatur amet alias adipisci facilis sed ab inventore, itaque repellat suscipit omnis, autem molestias numquam!</p>
+    </div>
+  </div>
+
+  <script src="medis.js"></script>
+</body>
+</html>
