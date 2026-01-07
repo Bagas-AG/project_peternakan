@@ -11,7 +11,7 @@ const fs = require("fs");
 // ⚙️ KONFIGURASI SERVER
 // ============================
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors({
   origin: ["http://127.0.0.1:5500", "http://localhost:5500"], // Live Server support
@@ -164,5 +164,5 @@ app.get("/api/simulasi", (req, res) => {
 // 🚀 START SERVER
 // ============================
 app.listen(PORT, () => {
-  console.log(`✅ Server berjalan di http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
