@@ -10,12 +10,29 @@ let hargaData = {};
 
 // LOAD DATA JSON
 Promise.all([
-  fetch('/../wilayah.json'),
-  fetch('/../harga.json')
+  fetch('/api/wilayah'),
+  fetch('/api/harga')
 ])
 .then(async ([wilayahRes, hargaRes]) => {
+  if (!wilayahRes.ok || !hargaRes.ok) {
+    throw new Error('Gagal load JSON');
+  }
+
   wilayahData = await wilayahRes.json();
   hargaData = await hargaRes.json();
+
+  Object.keys(wilayahData).forEach(prov => {
+    const opt = document.createElement('option');
+    opt.value = prov;
+    opt.textContent = prov;
+    provinsiSelect.appendChild(opt);
+  });
+})
+.catch(err => {
+  alert('Gagal memuat data JSON');
+  console.error(err);
+});
+
 
   // isi provinsi
   Object.keys(wilayahData).forEach(prov => {

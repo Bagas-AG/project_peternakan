@@ -60,10 +60,6 @@ app.post("/verify-otp", (req, res) => {
   res.json({ success: false, message: "OTP salah / kadaluarsa" });
 });
 
-app.get("/wilayah.json", (req, res) => {
-  res.sendFile(path.join(__dirname, "wilayah.json"));
-});
-
 // ============================
 // 💬 KOMUNITAS POSTS
 // ============================
@@ -171,6 +167,16 @@ app.post("/api/simulasi", (req, res) => {
 
 app.get("/api/simulasi", (req, res) => {
   res.json(readDS());
+});
+// ============================
+// 📂 PUBLIC JSON ROUTES
+// ============================
+app.get('/api/wilayah', (req, res) => {
+  res.sendFile(path.join(__dirname, 'wilayah.json'));
+});
+
+app.get('/api/harga', (req, res) => {
+  res.sendFile(path.join(__dirname, 'harga.json'));
 });
 
 // ============================
