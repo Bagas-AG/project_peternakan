@@ -10,8 +10,8 @@ let hargaData = {};
 
 // LOAD DATA JSON
 Promise.all([
-  fetch('../../wilayah.json'),
-  fetch('../../harga.json')
+  fetch('/../wilayah.json'),
+  fetch('/../harga.json')
 ])
 .then(async ([wilayahRes, hargaRes]) => {
   wilayahData = await wilayahRes.json();
