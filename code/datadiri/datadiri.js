@@ -5,10 +5,9 @@ const provinsiSelect = document.getElementById('provinsi');
 const kotaSelect = document.getElementById('wilayah');
 
 // === LOAD DATA DARI JSON ===
-fetch('/wilayah.json')
+fetch('/api/wilayah')
   .then(response => response.json())
   .then(data => {
-    // isi dropdown provinsi
     Object.keys(data).forEach(provinsi => {
       const option = document.createElement('option');
       option.value = provinsi;
@@ -16,7 +15,6 @@ fetch('/wilayah.json')
       provinsiSelect.appendChild(option);
     });
 
-    // ubah isi kota saat provinsi dipilih
     provinsiSelect.addEventListener('change', () => {
       const selectedProv = provinsiSelect.value;
       kotaSelect.innerHTML = '<option value="">Pilih Kota / Kabupaten</option>';
@@ -31,7 +29,7 @@ fetch('/wilayah.json')
       }
     });
   })
-  .catch(error => console.error('Gagal memuat wilayah.json:', error));
+  .catch(err => console.error(err));
 
 // === EVENT SUBMIT FORM ===
 form.addEventListener('submit', function (e) {

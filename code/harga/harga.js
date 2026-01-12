@@ -34,18 +34,7 @@ Promise.all([
 });
 
 
-  // isi provinsi
-  Object.keys(wilayahData).forEach(prov => {
-    const opt = document.createElement('option');
-    opt.value = prov;
-    opt.textContent = prov;
-    provinsiSelect.appendChild(opt);
-  });
-})
-.catch(err => {
-  alert('Gagal memuat data JSON');
-  console.error(err);
-});
+
 
 // saat provinsi dipilih
 provinsiSelect.addEventListener('change', () => {
